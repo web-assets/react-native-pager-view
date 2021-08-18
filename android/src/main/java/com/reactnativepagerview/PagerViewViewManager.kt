@@ -84,8 +84,7 @@ class PagerViewViewManager : ViewGroupManager<ViewPager2>() {
   
   override fun removeAllViews(parent: ViewPager2) {
     parent.setUserInputEnabled(false)
-    val adapter = parent.adapter as FragmentAdapter
-    adapter.removeAll()
+    super.removeAllViews(parent)
   }
 
   override fun needsCustomLayoutForChildren(): Boolean {
